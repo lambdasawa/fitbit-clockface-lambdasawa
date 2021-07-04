@@ -1,0 +1,26 @@
+service: fitbit-clockface-lambdasawa-server
+
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: go1.x
+  lambdaHashingVersion: 20201221
+
+package:
+  patterns:
+    - "!./**"
+    - ./bin/**
+
+functions:
+  main:
+    handler: bin/main
+    events:
+      - httpApi:
+          path: /
+          method: get
+    environment:
+      CONSUMER_KEY: ${env:CONSUMER_KEY}
+      CONSUMER_SECRET: ${env:CONSUMER_SECRET}
+      ACCESS_TOKEN: ${env:ACCESS_TOKEN}
+      ACCESS_SECRET: ${env:ACCESS_SECRET}

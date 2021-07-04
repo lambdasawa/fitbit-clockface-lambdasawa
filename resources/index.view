@@ -1,0 +1,11 @@
+<svg>
+  <rect id="background">
+    <text id="timeLabel" class="label" x="50%" y="50%" text-anchor="middle"></text>
+    <text id="dayLabel" class="label" x="50%" y="25%" text-anchor="middle"></text>
+    <textarea id="tweetLabel" class="label" x="5%" y="55%" width="90%"></textarea>
+    <text id="batteryLabel" class="bottomLabel" x="10%" y="80%" text-anchor="start"></text>
+    <text id="heartRateLabel" class="bottomLabel" x="50%" y="80%" text-anchor="start"></text>
+    <text id="stepsLabel" class="bottomLabel" x="10%" y="90%" text-anchor="start"></text>
+    <text id="caloriesLabel" class="bottomLabel" x="50%" y="90%" text-anchor="start"></text>
+  </rect>
+</svg>
