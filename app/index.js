@@ -49,10 +49,11 @@ function updateCaloriesLabel() {
 function updateTweetLabel(data) {
   const maxLength = 60;
   const tail = "...";
+  const baseData = data.replace("\n", " ");
   const text =
-    data.length > maxLength
-      ? data.slice(0, maxLength - tail.length) + tail
-      : data;
+    baseData.length > maxLength
+      ? baseData.slice(0, maxLength - tail.length) + tail
+      : baseData;
 
   document.getElementById("tweetLabel").text = text;
 }
